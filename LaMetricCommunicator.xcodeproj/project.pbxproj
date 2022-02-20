@@ -1,0 +1,776 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		523C4A5E27C1BCF2007C67E8 /* IconPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523C4A5D27C1BCF2007C67E8 /* IconPickerView.swift */; };
+		523C4A5F27C1BCF2007C67E8 /* IconPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523C4A5D27C1BCF2007C67E8 /* IconPickerView.swift */; };
+		52A0417327C16EF9007FFBCD /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A0417227C16EF9007FFBCD /* Tests_iOS.swift */; };
+		52A0417527C16EF9007FFBCD /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A0417427C16EF9007FFBCD /* Tests_iOSLaunchTests.swift */; };
+		52A0417F27C16EFA007FFBCD /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A0417E27C16EFA007FFBCD /* Tests_macOS.swift */; };
+		52A0418127C16EFA007FFBCD /* Tests_macOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A0418027C16EFA007FFBCD /* Tests_macOSLaunchTests.swift */; };
+		52A0418227C16EFA007FFBCD /* LaMetricCommunicatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A0415A27C16EF8007FFBCD /* LaMetricCommunicatorApp.swift */; };
+		52A0418327C16EFA007FFBCD /* LaMetricCommunicatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A0415A27C16EF8007FFBCD /* LaMetricCommunicatorApp.swift */; };
+		52A0418427C16EFA007FFBCD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A0415B27C16EF8007FFBCD /* ContentView.swift */; };
+		52A0418527C16EFA007FFBCD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A0415B27C16EF8007FFBCD /* ContentView.swift */; };
+		52A0418627C16EFA007FFBCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52A0415C27C16EF9007FFBCD /* Assets.xcassets */; };
+		52A0418727C16EFA007FFBCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52A0415C27C16EF9007FFBCD /* Assets.xcassets */; };
+		52A0419727C16FE3007FFBCD /* Communicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A0419627C16FE3007FFBCD /* Communicator.swift */; };
+		52A0419827C16FE3007FFBCD /* Communicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A0419627C16FE3007FFBCD /* Communicator.swift */; };
+		52A0419E27C1751C007FFBCD /* URLSession+cURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A0419D27C1751C007FFBCD /* URLSession+cURL.swift */; };
+		52A0419F27C1751C007FFBCD /* URLSession+cURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A0419D27C1751C007FFBCD /* URLSession+cURL.swift */; };
+		52A041A127C178C9007FFBCD /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A041A027C178C9007FFBCD /* APIConstants.swift */; };
+		52A041A227C178C9007FFBCD /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A041A027C178C9007FFBCD /* APIConstants.swift */; };
+		52A041A427C17927007FFBCD /* NotificationBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A041A327C17927007FFBCD /* NotificationBody.swift */; };
+		52A041A527C17927007FFBCD /* NotificationBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A041A327C17927007FFBCD /* NotificationBody.swift */; };
+		52A041A727C17A29007FFBCD /* IconsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A041A627C17A29007FFBCD /* IconsResponse.swift */; };
+		52A041A827C17A29007FFBCD /* IconsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A041A627C17A29007FFBCD /* IconsResponse.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		52A0416F27C16EF9007FFBCD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52A0415527C16EF8007FFBCD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52A0416027C16EF9007FFBCD;
+			remoteInfo = "LaMetricCommunicator (iOS)";
+		};
+		52A0417B27C16EFA007FFBCD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52A0415527C16EF8007FFBCD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52A0416627C16EF9007FFBCD;
+			remoteInfo = "LaMetricCommunicator (macOS)";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		523C4A5D27C1BCF2007C67E8 /* IconPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconPickerView.swift; sourceTree = "<group>"; };
+		52A0415A27C16EF8007FFBCD /* LaMetricCommunicatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaMetricCommunicatorApp.swift; sourceTree = "<group>"; };
+		52A0415B27C16EF8007FFBCD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		52A0415C27C16EF9007FFBCD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		52A0416127C16EF9007FFBCD /* LaMetricCommunicator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LaMetricCommunicator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		52A0416727C16EF9007FFBCD /* LaMetricCommunicator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LaMetricCommunicator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		52A0416927C16EF9007FFBCD /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		52A0416E27C16EF9007FFBCD /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		52A0417227C16EF9007FFBCD /* Tests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOS.swift; sourceTree = "<group>"; };
+		52A0417427C16EF9007FFBCD /* Tests_iOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOSLaunchTests.swift; sourceTree = "<group>"; };
+		52A0417A27C16EFA007FFBCD /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		52A0417E27C16EFA007FFBCD /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
+		52A0418027C16EFA007FFBCD /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
+		52A0419627C16FE3007FFBCD /* Communicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Communicator.swift; sourceTree = "<group>"; };
+		52A0419D27C1751C007FFBCD /* URLSession+cURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+cURL.swift"; sourceTree = "<group>"; };
+		52A041A027C178C9007FFBCD /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		52A041A327C17927007FFBCD /* NotificationBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationBody.swift; sourceTree = "<group>"; };
+		52A041A627C17A29007FFBCD /* IconsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsResponse.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		52A0415E27C16EF9007FFBCD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52A0416427C16EF9007FFBCD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52A0416B27C16EF9007FFBCD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52A0417727C16EF9007FFBCD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		52A0415427C16EF8007FFBCD = {
+			isa = PBXGroup;
+			children = (
+				52A0415927C16EF8007FFBCD /* Shared */,
+				52A0416827C16EF9007FFBCD /* macOS */,
+				52A0417127C16EF9007FFBCD /* Tests iOS */,
+				52A0417D27C16EFA007FFBCD /* Tests macOS */,
+				52A0416227C16EF9007FFBCD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		52A0415927C16EF8007FFBCD /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				52A041AB27C17C92007FFBCD /* Logic */,
+				52A041A027C178C9007FFBCD /* APIConstants.swift */,
+				52A041A927C17C72007FFBCD /* Views */,
+				52A0419927C17246007FFBCD /* Models */,
+				52A041AA27C17C7E007FFBCD /* Extensions */,
+				52A0415A27C16EF8007FFBCD /* LaMetricCommunicatorApp.swift */,
+				52A0415C27C16EF9007FFBCD /* Assets.xcassets */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		52A0416227C16EF9007FFBCD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				52A0416127C16EF9007FFBCD /* LaMetricCommunicator.app */,
+				52A0416727C16EF9007FFBCD /* LaMetricCommunicator.app */,
+				52A0416E27C16EF9007FFBCD /* Tests iOS.xctest */,
+				52A0417A27C16EFA007FFBCD /* Tests macOS.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		52A0416827C16EF9007FFBCD /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				52A0416927C16EF9007FFBCD /* macOS.entitlements */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		52A0417127C16EF9007FFBCD /* Tests iOS */ = {
+			isa = PBXGroup;
+			children = (
+				52A0417227C16EF9007FFBCD /* Tests_iOS.swift */,
+				52A0417427C16EF9007FFBCD /* Tests_iOSLaunchTests.swift */,
+			);
+			path = "Tests iOS";
+			sourceTree = "<group>";
+		};
+		52A0417D27C16EFA007FFBCD /* Tests macOS */ = {
+			isa = PBXGroup;
+			children = (
+				52A0417E27C16EFA007FFBCD /* Tests_macOS.swift */,
+				52A0418027C16EFA007FFBCD /* Tests_macOSLaunchTests.swift */,
+			);
+			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+		52A0419927C17246007FFBCD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				52A041A327C17927007FFBCD /* NotificationBody.swift */,
+				52A041A627C17A29007FFBCD /* IconsResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		52A041A927C17C72007FFBCD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				52A0415B27C16EF8007FFBCD /* ContentView.swift */,
+				523C4A5D27C1BCF2007C67E8 /* IconPickerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		52A041AA27C17C7E007FFBCD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				52A0419D27C1751C007FFBCD /* URLSession+cURL.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		52A041AB27C17C92007FFBCD /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				52A0419627C16FE3007FFBCD /* Communicator.swift */,
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		52A0416027C16EF9007FFBCD /* LaMetricCommunicator (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52A0418A27C16EFA007FFBCD /* Build configuration list for PBXNativeTarget "LaMetricCommunicator (iOS)" */;
+			buildPhases = (
+				52A0415D27C16EF9007FFBCD /* Sources */,
+				52A0415E27C16EF9007FFBCD /* Frameworks */,
+				52A0415F27C16EF9007FFBCD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LaMetricCommunicator (iOS)";
+			productName = "LaMetricCommunicator (iOS)";
+			productReference = 52A0416127C16EF9007FFBCD /* LaMetricCommunicator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		52A0416627C16EF9007FFBCD /* LaMetricCommunicator (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52A0418D27C16EFA007FFBCD /* Build configuration list for PBXNativeTarget "LaMetricCommunicator (macOS)" */;
+			buildPhases = (
+				52A0416327C16EF9007FFBCD /* Sources */,
+				52A0416427C16EF9007FFBCD /* Frameworks */,
+				52A0416527C16EF9007FFBCD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LaMetricCommunicator (macOS)";
+			productName = "LaMetricCommunicator (macOS)";
+			productReference = 52A0416727C16EF9007FFBCD /* LaMetricCommunicator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		52A0416D27C16EF9007FFBCD /* Tests iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52A0419027C16EFA007FFBCD /* Build configuration list for PBXNativeTarget "Tests iOS" */;
+			buildPhases = (
+				52A0416A27C16EF9007FFBCD /* Sources */,
+				52A0416B27C16EF9007FFBCD /* Frameworks */,
+				52A0416C27C16EF9007FFBCD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				52A0417027C16EF9007FFBCD /* PBXTargetDependency */,
+			);
+			name = "Tests iOS";
+			productName = "Tests iOS";
+			productReference = 52A0416E27C16EF9007FFBCD /* Tests iOS.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		52A0417927C16EF9007FFBCD /* Tests macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52A0419327C16EFA007FFBCD /* Build configuration list for PBXNativeTarget "Tests macOS" */;
+			buildPhases = (
+				52A0417627C16EF9007FFBCD /* Sources */,
+				52A0417727C16EF9007FFBCD /* Frameworks */,
+				52A0417827C16EF9007FFBCD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				52A0417C27C16EFA007FFBCD /* PBXTargetDependency */,
+			);
+			name = "Tests macOS";
+			productName = "Tests macOS";
+			productReference = 52A0417A27C16EFA007FFBCD /* Tests macOS.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		52A0415527C16EF8007FFBCD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					52A0416027C16EF9007FFBCD = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					52A0416627C16EF9007FFBCD = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					52A0416D27C16EF9007FFBCD = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 52A0416027C16EF9007FFBCD;
+					};
+					52A0417927C16EF9007FFBCD = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 52A0416627C16EF9007FFBCD;
+					};
+				};
+			};
+			buildConfigurationList = 52A0415827C16EF8007FFBCD /* Build configuration list for PBXProject "LaMetricCommunicator" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 52A0415427C16EF8007FFBCD;
+			productRefGroup = 52A0416227C16EF9007FFBCD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				52A0416027C16EF9007FFBCD /* LaMetricCommunicator (iOS) */,
+				52A0416627C16EF9007FFBCD /* LaMetricCommunicator (macOS) */,
+				52A0416D27C16EF9007FFBCD /* Tests iOS */,
+				52A0417927C16EF9007FFBCD /* Tests macOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		52A0415F27C16EF9007FFBCD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52A0418627C16EFA007FFBCD /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52A0416527C16EF9007FFBCD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52A0418727C16EFA007FFBCD /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52A0416C27C16EF9007FFBCD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52A0417827C16EF9007FFBCD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		52A0415D27C16EF9007FFBCD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52A0419E27C1751C007FFBCD /* URLSession+cURL.swift in Sources */,
+				523C4A5E27C1BCF2007C67E8 /* IconPickerView.swift in Sources */,
+				52A0419727C16FE3007FFBCD /* Communicator.swift in Sources */,
+				52A041A127C178C9007FFBCD /* APIConstants.swift in Sources */,
+				52A0418427C16EFA007FFBCD /* ContentView.swift in Sources */,
+				52A041A427C17927007FFBCD /* NotificationBody.swift in Sources */,
+				52A041A727C17A29007FFBCD /* IconsResponse.swift in Sources */,
+				52A0418227C16EFA007FFBCD /* LaMetricCommunicatorApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52A0416327C16EF9007FFBCD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52A0419F27C1751C007FFBCD /* URLSession+cURL.swift in Sources */,
+				523C4A5F27C1BCF2007C67E8 /* IconPickerView.swift in Sources */,
+				52A0419827C16FE3007FFBCD /* Communicator.swift in Sources */,
+				52A041A227C178C9007FFBCD /* APIConstants.swift in Sources */,
+				52A0418527C16EFA007FFBCD /* ContentView.swift in Sources */,
+				52A041A527C17927007FFBCD /* NotificationBody.swift in Sources */,
+				52A041A827C17A29007FFBCD /* IconsResponse.swift in Sources */,
+				52A0418327C16EFA007FFBCD /* LaMetricCommunicatorApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52A0416A27C16EF9007FFBCD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52A0417527C16EF9007FFBCD /* Tests_iOSLaunchTests.swift in Sources */,
+				52A0417327C16EF9007FFBCD /* Tests_iOS.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52A0417627C16EF9007FFBCD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52A0418127C16EFA007FFBCD /* Tests_macOSLaunchTests.swift in Sources */,
+				52A0417F27C16EFA007FFBCD /* Tests_macOS.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		52A0417027C16EF9007FFBCD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52A0416027C16EF9007FFBCD /* LaMetricCommunicator (iOS) */;
+			targetProxy = 52A0416F27C16EF9007FFBCD /* PBXContainerItemProxy */;
+		};
+		52A0417C27C16EFA007FFBCD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52A0416627C16EF9007FFBCD /* LaMetricCommunicator (macOS) */;
+			targetProxy = 52A0417B27C16EFA007FFBCD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		52A0418827C16EFA007FFBCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		52A0418927C16EFA007FFBCD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		52A0418B27C16EFA007FFBCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WRJ8J85K4Q;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codedbydan.LaMetricCommunicator;
+				PRODUCT_NAME = LaMetricCommunicator;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		52A0418C27C16EFA007FFBCD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WRJ8J85K4Q;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codedbydan.LaMetricCommunicator;
+				PRODUCT_NAME = LaMetricCommunicator;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		52A0418E27C16EFA007FFBCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WRJ8J85K4Q;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codedbydan.LaMetricCommunicator;
+				PRODUCT_NAME = LaMetricCommunicator;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		52A0418F27C16EFA007FFBCD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WRJ8J85K4Q;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codedbydan.LaMetricCommunicator;
+				PRODUCT_NAME = LaMetricCommunicator;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		52A0419127C16EFA007FFBCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WRJ8J85K4Q;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.codedbydan.Tests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "LaMetricCommunicator (iOS)";
+			};
+			name = Debug;
+		};
+		52A0419227C16EFA007FFBCD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WRJ8J85K4Q;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.codedbydan.Tests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "LaMetricCommunicator (iOS)";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		52A0419427C16EFA007FFBCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WRJ8J85K4Q;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.codedbydan.Tests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "LaMetricCommunicator (macOS)";
+			};
+			name = Debug;
+		};
+		52A0419527C16EFA007FFBCD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WRJ8J85K4Q;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.codedbydan.Tests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "LaMetricCommunicator (macOS)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		52A0415827C16EF8007FFBCD /* Build configuration list for PBXProject "LaMetricCommunicator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52A0418827C16EFA007FFBCD /* Debug */,
+				52A0418927C16EFA007FFBCD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52A0418A27C16EFA007FFBCD /* Build configuration list for PBXNativeTarget "LaMetricCommunicator (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52A0418B27C16EFA007FFBCD /* Debug */,
+				52A0418C27C16EFA007FFBCD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52A0418D27C16EFA007FFBCD /* Build configuration list for PBXNativeTarget "LaMetricCommunicator (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52A0418E27C16EFA007FFBCD /* Debug */,
+				52A0418F27C16EFA007FFBCD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52A0419027C16EFA007FFBCD /* Build configuration list for PBXNativeTarget "Tests iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52A0419127C16EFA007FFBCD /* Debug */,
+				52A0419227C16EFA007FFBCD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52A0419327C16EFA007FFBCD /* Build configuration list for PBXNativeTarget "Tests macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52A0419427C16EFA007FFBCD /* Debug */,
+				52A0419527C16EFA007FFBCD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 52A0415527C16EF8007FFBCD /* Project object */;
+}
