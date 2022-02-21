@@ -12,6 +12,7 @@ struct IconPickerView: View {
     
     var data: [Datum]
     @Binding var selectedIconID: String
+    @Binding var isParentViewLoading: Bool
     
     let columns = [
         GridItem(.adaptive(minimum: 80))
@@ -32,14 +33,30 @@ struct IconPickerView: View {
                 }
                 .padding(.horizontal)
             }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button {
+                        presentationMode.wrappedValue.dismiss()
+                    } label: {
+                        Text("Cancel")
+                    }
+
+                }
+            }
             
             .navigationTitle("Pick an icon")
         }
+        .onAppear {
+            isParentViewLoading = false
+        }
+        #if os(iOS)
+        .navigationViewStyle(StackNavigationViewStyle())
+        #endif
     }
 }
 
 struct IconPickerView_Previews: PreviewProvider {
     static var previews: some View {
-        IconPickerView(data: [], selectedIconID: .constant(""))
+        IconPickerView(data: [], selectedIconID: .constant(""), isParentViewLoading: .constant(false))
     }
 }
