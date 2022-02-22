@@ -21,6 +21,9 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
+        #if os(macOS)
+            EmptyView()
+        #endif
             List {
                 Section("Connection") {
                     HStack {
@@ -55,21 +58,18 @@ struct ContentView: View {
                         Text("Select Icon")
                     } else {
                         HStack {
-                            Text("Select Icon")
-                            .sheet(isPresented: $isShowingIconPickerView, onDismiss: nil) {
+                            NavigationLink {
                                 IconPickerView(data: communicator.iconsResponse.data, selectedIconID: $icon, isParentViewLoading: $isLoading)
-                            }
-                            
-                            Spacer()
-                            
-                            let selectedIcon = communicator.iconsResponse.data.first { item in
-                                "\(item.id ?? 1234)" == icon
-                            }
-                            AsyncImage(url: URL(string: selectedIcon?.thumb?.small ?? ""))
-                                .onTapGesture {
-                                    isLoading = true
-                                    isShowingIconPickerView.toggle()
+                            } label: {
+                                HStack {
+                                    Text("Select Icon")
+                                    Spacer()
+                                    let selectedIcon = communicator.iconsResponse.data.first { item in
+                                        "\(item.id ?? 1234)" == icon
+                                    }
+                                    AsyncImage(url: URL(string: selectedIcon?.thumb?.small ?? ""))
                                 }
+                            }
                         }
                         .onAppear {
                             isLoading = false

@@ -14,44 +14,43 @@ struct IconPickerView: View {
     @Binding var selectedIconID: String
     @Binding var isParentViewLoading: Bool
     
+    @State var searchText = ""
+    
     let columns = [
         GridItem(.adaptive(minimum: 80))
     ]
     
     var body: some View {
-        NavigationView {
             ScrollView {
+                #if os(macOS)
+                VStack {
+                    Text("Pick an Icon")
+                        .font(.largeTitle)
+                    TextField("Search", text: $searchText)
+                        .padding()
+                }
+                #endif
+                
                 LazyVGrid(columns: columns, spacing: 20) {
                     ForEach(data, id: \.self) { item in
                         let url = URL(string: item.thumb?.small ?? "")
                         AsyncImage(url: url)
                             .onTapGesture {
                                 selectedIconID = "\(item.id ?? 1234)"
+                                #if os(iOS)
                                 presentationMode.wrappedValue.dismiss()
+                                #endif
                             }
                     }
                 }
+                .searchable(text: $searchText, prompt: "Search")
                 .padding(.horizontal)
             }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button {
-                        presentationMode.wrappedValue.dismiss()
-                    } label: {
-                        Text("Cancel")
-                    }
-
-                }
+            .onAppear {
+                isParentViewLoading = false
             }
             
-            .navigationTitle("Pick an icon")
-        }
-        .onAppear {
-            isParentViewLoading = false
-        }
-        #if os(iOS)
-        .navigationViewStyle(StackNavigationViewStyle())
-        #endif
+            .navigationTitle("Pick an Icon")
     }
 }
 
