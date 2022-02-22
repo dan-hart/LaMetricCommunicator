@@ -14,7 +14,8 @@ struct ContentView: View {
     @AppStorage("apiKey") var apiKey = ""
     @AppStorage("sound") var sound = APIConstants.SoundID.bicycle.rawValue
     @AppStorage("icon") var icon = "1234"
-    @AppStorage("message") var message: String = "Hi"
+    @AppStorage("message") var message = "Hi"
+    @AppStorage("priority") var priority = NotificationPriority.warning.rawValue
     
     @State var isShowingIconPickerView = false
     @State var isLoading = true
@@ -47,6 +48,13 @@ struct ContentView: View {
                 }
                 
                 Section("Customize") {
+                    Picker("Priority", selection: $priority) {
+                        ForEach(NotificationPriority.allCases, id: \.self) { priority in
+                            Text(priority.rawValue).tag(priority.rawValue)
+                        }
+                    }
+                    .labelsHidden()
+                    
                     Picker("Select Sound", selection: $sound) {
                         ForEach(APIConstants.SoundID.allCases, id: \.self) { sound in
                             Text(sound.rawValue).tag(sound.rawValue)
@@ -58,18 +66,32 @@ struct ContentView: View {
                         Text("Select Icon")
                     } else {
                         HStack {
+                            let row = HStack {
+                                Text("Select Icon")
+                                Spacer()
+                                let selectedIcon = communicator.iconsResponse.data.first { item in
+                                    "\(item.id ?? 1234)" == icon
+                                }
+                                CachedAsyncImage(url: URL(string: selectedIcon?.thumb?.small ?? ""))
+                            }
+                            
+                            #if os(iOS)
                             NavigationLink {
                                 IconPickerView(data: communicator.iconsResponse.data, selectedIconID: $icon, isParentViewLoading: $isLoading)
                             } label: {
-                                HStack {
-                                    Text("Select Icon")
-                                    Spacer()
-                                    let selectedIcon = communicator.iconsResponse.data.first { item in
-                                        "\(item.id ?? 1234)" == icon
-                                    }
-                                    AsyncImage(url: URL(string: selectedIcon?.thumb?.small ?? ""))
-                                }
+                                row
                             }
+                            #endif
+                            
+                            #if os(macOS)
+                            row
+                            .onTapGesture {
+                                isShowingIconPickerView.toggle()
+                            }
+                            .sheet(isPresented: $isShowingIconPickerView, onDismiss: nil) {
+                                IconPickerView(data: communicator.iconsResponse.data, selectedIconID: $icon, isParentViewLoading: $isLoading)
+                            }
+                            #endif
                         }
                         .onAppear {
                             isLoading = false
@@ -94,7 +116,7 @@ struct ContentView: View {
                     HStack {
                         TextField("", text: $message)
                         Button {
-                            communicator.send(message: message, with: APIConstants.SoundID(rawValue: sound) ?? APIConstants.SoundID.bicycle, showing: Int(icon) ?? 1234, for: ipAddress, using: apiKey)
+                            communicator.send(message: message, with: APIConstants.SoundID(rawValue: sound) ?? APIConstants.SoundID.bicycle, priority: NotificationPriority(rawValue: priority) ?? .warning, showing: Int(icon) ?? 1234, for: ipAddress, using: apiKey)
                         } label: {
                             Text("Send")
                         }

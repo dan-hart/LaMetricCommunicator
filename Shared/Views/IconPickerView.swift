@@ -11,6 +11,9 @@ struct IconPickerView: View {
     @Environment(\.presentationMode) private var presentationMode: Binding<PresentationMode>
     
     var data: [Datum]
+    
+    @State var dataForDisplay: [Datum] = []
+    
     @Binding var selectedIconID: String
     @Binding var isParentViewLoading: Bool
     
@@ -21,36 +24,57 @@ struct IconPickerView: View {
     ]
     
     var body: some View {
-            ScrollView {
-                #if os(macOS)
-                VStack {
-                    Text("Pick an Icon")
-                        .font(.largeTitle)
-                    TextField("Search", text: $searchText)
-                        .padding()
-                }
-                #endif
-                
-                LazyVGrid(columns: columns, spacing: 20) {
-                    ForEach(data, id: \.self) { item in
-                        let url = URL(string: item.thumb?.small ?? "")
-                        AsyncImage(url: url)
-                            .onTapGesture {
-                                selectedIconID = "\(item.id ?? 1234)"
-                                #if os(iOS)
-                                presentationMode.wrappedValue.dismiss()
-                                #endif
-                            }
+        ScrollView {
+#if os(macOS)
+            VStack {
+                HStack {
+                    Button {
+                        presentationMode.wrappedValue.dismiss()
+                    } label: {
+                        Text("Cancel")
                     }
-                }
-                .searchable(text: $searchText, prompt: "Search")
-                .padding(.horizontal)
+                    Spacer()
+                }.padding()
+                Text("Pick an Icon")
+                    .font(.largeTitle)
+                    .padding(.top)
+                TextField("Search", text: $searchText)
+                    .padding()
             }
-            .onAppear {
-                isParentViewLoading = false
-            }
+#endif
             
-            .navigationTitle("Pick an Icon")
+            LazyVGrid(columns: columns, spacing: 20) {
+                ForEach(dataForDisplay, id: \.self) { item in
+                    let url = URL(string: item.thumb?.small ?? "")
+                    CachedAsyncImage(url: url)
+                        .onTapGesture {
+                            selectedIconID = "\(item.id ?? 1234)"
+                            presentationMode.wrappedValue.dismiss()
+                        }
+                }
+            }
+            .onChange(of: searchText) { newValue in
+                if newValue.isEmpty {
+                    dataForDisplay = data
+                    return
+                }
+                
+                dataForDisplay = data.filter { item in
+                    item.title?.lowercased().contains(newValue.lowercased()) ?? false
+                }
+            }
+            .searchable(text: $searchText, prompt: "Search")
+            .padding(.horizontal)
+        }
+#if os(macOS)
+        .frame(minWidth: 400, minHeight: 400, alignment: .center)
+#endif
+        .onAppear {
+            isParentViewLoading = false
+            dataForDisplay = data
+        }
+        
+        .navigationTitle("Pick an Icon")
     }
 }
 

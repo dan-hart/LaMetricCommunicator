@@ -17,10 +17,10 @@ class Communicator: ObservableObject {
     }
     
     // MARK: - Functions
-    func send(message text: String, with sound: APIConstants.SoundID, showing iconID: Int, for ip: String, using apiKey: String) {
+    func send(message text: String, with sound: APIConstants.SoundID, priority: NotificationPriority, showing iconID: Int, for ip: String, using apiKey: String) {
         guard let url = URL(string: "http://\(ip):8080/api/v2/device/notifications") else { return }
         
-        let body = NotificationBody.create(message: text, using: iconID, with: sound)
+        let body = NotificationBody.create(message: text, using: iconID, with: sound, priority: priority)
 
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
