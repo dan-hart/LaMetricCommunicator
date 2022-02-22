@@ -13,6 +13,8 @@
 		5274CEA227C4913F001C97F5 /* CachedAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5274CEA027C4913F001C97F5 /* CachedAsyncImage.swift */; };
 		5274CEA427C496FA001C97F5 /* NotificationPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5274CEA327C496FA001C97F5 /* NotificationPriority.swift */; };
 		5274CEA527C496FA001C97F5 /* NotificationPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5274CEA327C496FA001C97F5 /* NotificationPriority.swift */; };
+		5274CEA727C49B58001C97F5 /* ResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5274CEA627C49B58001C97F5 /* ResponseError.swift */; };
+		5274CEA827C49B58001C97F5 /* ResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5274CEA627C49B58001C97F5 /* ResponseError.swift */; };
 		52A0417327C16EF9007FFBCD /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A0417227C16EF9007FFBCD /* Tests_iOS.swift */; };
 		52A0417527C16EF9007FFBCD /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A0417427C16EF9007FFBCD /* Tests_iOSLaunchTests.swift */; };
 		52A0417F27C16EFA007FFBCD /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A0417E27C16EFA007FFBCD /* Tests_macOS.swift */; };
@@ -56,6 +58,7 @@
 		523C4A5D27C1BCF2007C67E8 /* IconPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconPickerView.swift; sourceTree = "<group>"; };
 		5274CEA027C4913F001C97F5 /* CachedAsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedAsyncImage.swift; sourceTree = "<group>"; };
 		5274CEA327C496FA001C97F5 /* NotificationPriority.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPriority.swift; sourceTree = "<group>"; };
+		5274CEA627C49B58001C97F5 /* ResponseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseError.swift; sourceTree = "<group>"; };
 		52A0415A27C16EF8007FFBCD /* LaMetricCommunicatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaMetricCommunicatorApp.swift; sourceTree = "<group>"; };
 		52A0415B27C16EF8007FFBCD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		52A0415C27C16EF9007FFBCD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -175,6 +178,7 @@
 				52A041A327C17927007FFBCD /* NotificationBody.swift */,
 				52A041A627C17A29007FFBCD /* IconsResponse.swift */,
 				5274CEA327C496FA001C97F5 /* NotificationPriority.swift */,
+				5274CEA627C49B58001C97F5 /* ResponseError.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -368,6 +372,7 @@
 				523C4A5E27C1BCF2007C67E8 /* IconPickerView.swift in Sources */,
 				52A0419727C16FE3007FFBCD /* Communicator.swift in Sources */,
 				52A041A127C178C9007FFBCD /* APIConstants.swift in Sources */,
+				5274CEA727C49B58001C97F5 /* ResponseError.swift in Sources */,
 				52A0418427C16EFA007FFBCD /* ContentView.swift in Sources */,
 				52A041A427C17927007FFBCD /* NotificationBody.swift in Sources */,
 				52A041A727C17A29007FFBCD /* IconsResponse.swift in Sources */,
@@ -385,6 +390,7 @@
 				523C4A5F27C1BCF2007C67E8 /* IconPickerView.swift in Sources */,
 				52A0419827C16FE3007FFBCD /* Communicator.swift in Sources */,
 				52A041A227C178C9007FFBCD /* APIConstants.swift in Sources */,
+				5274CEA827C49B58001C97F5 /* ResponseError.swift in Sources */,
 				52A0418527C16EFA007FFBCD /* ContentView.swift in Sources */,
 				52A041A527C17927007FFBCD /* NotificationBody.swift in Sources */,
 				52A041A827C17A29007FFBCD /* IconsResponse.swift in Sources */,

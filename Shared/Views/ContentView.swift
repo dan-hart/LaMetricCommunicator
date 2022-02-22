@@ -19,6 +19,7 @@ struct ContentView: View {
     
     @State var isShowingIconPickerView = false
     @State var isLoading = true
+    @State var result = ""
     
     var body: some View {
         NavigationView {
@@ -40,6 +41,8 @@ struct ContentView: View {
                     Button {
                         ipAddress = ""
                         apiKey = ""
+                        
+                        result = ""
                     } label: {
                         Text("Clear Connection Data")
                             .disabled(ipAddress.isEmpty && apiKey.isEmpty)
@@ -116,11 +119,28 @@ struct ContentView: View {
                     HStack {
                         TextField("", text: $message)
                         Button {
-                            communicator.send(message: message, with: APIConstants.SoundID(rawValue: sound) ?? APIConstants.SoundID.bicycle, priority: NotificationPriority(rawValue: priority) ?? .warning, showing: Int(icon) ?? 1234, for: ipAddress, using: apiKey)
+                            result = ""
+                            communicator.send(message: message,
+                                              with: APIConstants.SoundID(rawValue: sound) ?? APIConstants.SoundID.bicycle,
+                                              priority: NotificationPriority(rawValue: priority) ?? .warning,
+                                              showing: Int(icon) ?? 1234,
+                                              for: ipAddress, using: apiKey) { optionalMessage in
+                                if let message = optionalMessage {
+                                    result = "❌ \(message)"
+                                } else {
+                                    result = "✅ Sent Message"
+                                }
+                            }
                         } label: {
                             Text("Send")
                         }
                         .disabled(ipAddress.isEmpty || apiKey.isEmpty)
+                    }
+                }
+                
+                if !result.isEmpty {
+                    Section {
+                        Text(result)
                     }
                 }
                 

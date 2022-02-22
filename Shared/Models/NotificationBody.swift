@@ -10,8 +10,12 @@ struct NotificationBody: Codable {
     let priority: String?
     let model: Model?
     
-    static func create(message: String, using icon: Int, with soundID: APIConstants.SoundID, priority: NotificationPriority) -> NotificationBody {
-        return NotificationBody(priority: priority.rawValue, model: Model(cycles: 1, frames: [Frame(icon: icon, text: message)], sound: Sound(category: "notifications", id: soundID.rawValue)))
+    static func create(message: String,
+                       using icon: Int,
+                       with soundID: APIConstants.SoundID,
+                       priority: NotificationPriority) -> NotificationBody {
+        let sound = soundID == .none ? nil : Sound(category: "notifications", id: soundID.rawValue)
+        return NotificationBody(priority: priority.rawValue, model: Model(cycles: 1, frames: [Frame(icon: icon, text: message)], sound: sound))
     }
 }
 

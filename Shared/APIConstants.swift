@@ -9,6 +9,7 @@ import Foundation
 
 class APIConstants {
     public enum SoundID: String, CaseIterable {
+        case none
         case bicycle
         case car
         case cash

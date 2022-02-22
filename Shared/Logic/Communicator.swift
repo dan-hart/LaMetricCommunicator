@@ -15,10 +15,16 @@ class Communicator: ObservableObject {
     init() {
         requestIcons()
     }
-    
+        
     // MARK: - Functions
-    func send(message text: String, with sound: APIConstants.SoundID, priority: NotificationPriority, showing iconID: Int, for ip: String, using apiKey: String) {
-        guard let url = URL(string: "http://\(ip):8080/api/v2/device/notifications") else { return }
+    func send(message text: String,
+              with sound: APIConstants.SoundID,
+              priority: NotificationPriority,
+              showing iconID: Int,
+              for ip: String,
+              using apiKey: String,
+              completion: @escaping (String?) -> Void) {
+        guard let url = URL(string: "http://\(ip):8080/api/v2/device/notifications") else { return completion("Unable to form URL.") }
         
         let body = NotificationBody.create(message: text, using: iconID, with: sound, priority: priority)
 
@@ -33,9 +39,18 @@ class Communicator: ObservableObject {
         print(request.cURL(pretty: true))
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            _ = "breakhere"
-            guard let data = data else { return }
-            print(String(data: data, encoding: .utf8)!)
+            guard let data = data else { return completion("Data is nil.") }
+            
+            if let errors = try? ResponseError(data: data).errors {
+                let errorMessage = errors.first?.message ?? "Unknown Error"
+                return completion(errorMessage)
+            }
+            
+            if let error = error {
+                return completion(error.localizedDescription)
+            } else {
+                return completion(nil)
+            }
         }
 
         task.resume()
@@ -48,7 +63,6 @@ class Communicator: ObservableObject {
             guard let icons = response else { return }
             DispatchQueue.main.async {
                 self.iconsResponse = icons
-                print("Fetched Icons")
             }
         }
         
