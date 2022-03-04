@@ -1,7 +1,7 @@
 # LaMetricCommunicator
 iOS app to send notifications to LaMetric TIME
 
-[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/https://www.buymeacoffee.com/codedbydan)
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/codedbydan)
 
 LaMetric:
 https://lametric.com/en-US
